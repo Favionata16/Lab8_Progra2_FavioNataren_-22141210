@@ -18,10 +18,12 @@ import javax.swing.table.DefaultTableModel;
  */
 public class gui extends javax.swing.JFrame {
 Color col=white;
-bina bin = new bina("./carros.cbm");
+binario bin = new binario("./carros.cbm");
 ArrayList <Carros> carr=new ArrayList();
     public gui() {
         initComponents();
+                this.setLocationRelativeTo(null);
+
         bin.cargarArchivo();
         for (Carros car : bin.getcar()) {
                 corredor.addItem(String.valueOf(car.getNumero()));
@@ -147,25 +149,25 @@ ArrayList <Carros> carr=new ArrayList();
         jPanel1.add(pausar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 90, 40));
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Nombre Pista");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 570, -1, -1));
         jPanel1.add(nompis, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 560, 200, 30));
 
         jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Largo");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 640, -1, -1));
         jPanel1.add(largo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 630, 200, 30));
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Numero Identificador");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, -1, -1));
         jPanel1.add(identi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 600, 170, 30));
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Nombre Corredor");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 650, -1, -1));
         jPanel1.add(nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 650, 170, 30));
@@ -244,7 +246,11 @@ ArrayList <Carros> carr=new ArrayList();
             }
         });
         jPanel1.add(Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 90, 30));
+
+        jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 790));
+
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 350, 790));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
